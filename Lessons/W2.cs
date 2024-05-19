@@ -1,24 +1,31 @@
-int x = 0; //you should normally give variables a starting value
+using System;
 
-if (x==0){
-    //do some fun stuff here
-    Console.WriteLine("TEXT");
-}
+class Program
+    static void Main(string[] args)
+{
 
-while (x < 3) {
-    Console.WriteLine("TEXT");
-    x = x + 1; //can also use x += 1
-}
+    int x = 0; //you should normally give variables a starting value
 
-do {
-    Console.WriteLine("TEXT");
+    if (x==0){
+        //do some fun stuff here
+        Console.WriteLine("TEXT");
+    }
 
-} while (x < 3); //this gaurentees that the code will run at least once
+    while (x < 3) {
+        Console.WriteLine("TEXT");
+        x = x + 1; //can also use x += 1
+    }
 
-foreach (x in something) {
-    //insert fun code
-}
+    do {
+        Console.WriteLine("TEXT");
 
-for (; ; ) { //(initializer; true/false test; modifier)
+    } while (x < 3); //this gaurentees that the code will run at least once
 
+    foreach (x in something) {
+        //insert fun code
+    }
+
+    for (int x = 0; x < 9; x++) { //(initializer; true/false test; modifier)
+        Console.WriteLine("TEXT");
+    }
 }
