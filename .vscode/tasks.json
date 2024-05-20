@@ -2,6 +2,19 @@
 {
     "version": "2.0.0",
     "tasks": [
+        
+        {
+            "label": "build-sandbox-Lessons",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/sandbox/Lessons/Lessons.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
 
         {
             "label": "build-sandbox-Sandbox",

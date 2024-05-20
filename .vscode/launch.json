@@ -4,6 +4,19 @@
     "configurations": [
 
         {
+            "name": "Lessons",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-sandbox-Lessons",
+            "program": "${workspaceFolder}/sandbox/Lessons/bin/Debug/net8.0/Lessons.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/sandbox/Lessons",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+
+        {
             "name": "Sandbox Project",
             "type": "coreclr",
             "request": "launch",
@@ -15,7 +28,7 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
+        
         {
             "name": "C# Prep 1",
             "type": "coreclr",

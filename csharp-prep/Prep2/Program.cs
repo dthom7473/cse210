@@ -8,7 +8,8 @@ class Program
         string gradeString = Console.ReadLine();
         int gradePercentage = int.Parse(gradeString);
 
-        string letterGrade = "F";
+        string letterGrade;
+        letterGrade = "F";
         bool passed = false;
 
         if (gradePercentage >= 90) {
@@ -40,4 +41,4 @@ class Program
         }
         
     }
-}
+} 
