@@ -3,19 +3,18 @@ using System.IO;
 
 public class DataLoader
 {
-    private string _filePath;
+    private string filePath;
 
     public DataLoader(string filePath)
     {
-        _filePath = filePath;
+        this.filePath = filePath;
     }
 
     public void LoadEntries()
     {
-        if (File.Exists(_filePath))
+        if (File.Exists(filePath))
         {
-            string[] lines = File.ReadAllLines(_filePath);
-
+            string[] lines = File.ReadAllLines(filePath);
             foreach (string line in lines)
             {
                 Console.WriteLine(line);

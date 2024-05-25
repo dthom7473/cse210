@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Net;
 
 class Program
 {
@@ -42,35 +41,32 @@ class Program
             }
         }
     }
-        static void WriteJournalEntry(string filePath)
+
+    static void WriteJournalEntry(string filePath)
+    {
+        PromptGenerator promptGenerator = new PromptGenerator();
+        string prompt = promptGenerator.GetRandomPrompt();
+
+        // Display and record the prompt and the user's entry
+        Console.WriteLine($"{prompt}:");
+        string userEntry = Console.ReadLine();
+
+        // Create a new Entry object with the current date
+        Entry entry = new Entry(prompt, userEntry);
+
+        // Append the new entry to the file
+        using (StreamWriter outputFile = new StreamWriter(filePath, true))
         {
-            PromptGenerator promptGenerator = new PromptGenerator();
-            string prompt = promptGenerator.GetRandomPrompt();
-
-            // Display and record the prompt and the user's entry
-            Console.WriteLine($"{prompt}:");
-            string userEntry = Console.ReadLine();
-
-            Console.Write("Date (mm/dd/yyyy): ");
-            string dateOfEntry = Console.ReadLine();
-
-            // Append the new entry to the file
-            using (StreamWriter outputFile = new StreamWriter(filePath, true))
-            {
-                outputFile.WriteLine($"Date: {dateOfEntry} - Prompt: {prompt}");
-                outputFile.WriteLine(userEntry);
-                outputFile.WriteLine(); // Add an empty line for separation
-            }
-
-            Console.WriteLine("Entry saved to file.");
+            outputFile.WriteLine(entry.ToString());
         }
 
-        static void ViewAllEntries(string filePath)
-        {
-            // Load and display entries using DataLoader
-            DataLoader dataLoader = new DataLoader(filePath);
-            dataLoader.LoadEntries();
-        }
+        Console.WriteLine("Entry saved to file.");
+    }
 
-    
+    static void ViewAllEntries(string filePath)
+    {
+        // Load and display entries using DataLoader
+        DataLoader dataLoader = new DataLoader(filePath);
+        dataLoader.LoadEntries();
+    }
 }

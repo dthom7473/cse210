@@ -4,3 +4,12 @@ Nothign
 Date: 12121212 - Prompt: What was the most interesting thing someone said to you today?
 I am a wierd man
 
+Date: no - Prompt: What was the most interesting thing someone said to you today?
+I don't remember
+
+Date: 05/25/2024 - Prompt: What was the most interesting thing someone said to you today?
+I don't care
+
+Date: 05/25/2024 - Prompt: Who upset you most today and why?
+This Projecy
+
